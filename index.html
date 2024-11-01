@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pojištění App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="index.html">PojištěníApp</a></div>
+        <nav>
+          <a href="#">Pojištěnci</a>
+          <a href="#">O aplikaci...</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="insured-section">
+        <h2>Pojištěnci</h2>
+        <table id="insuranceTable">
+          <thead>
+            <tr>
+              <th>Jméno a Příjmení</th>
+              <th>Telefon</th>
+              <th>Datum narození</th>
+              <th>Možnosti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Záznamy pojištěnců budou zde -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="new-insured-section">
+        <h2>Nový pojištěnec</h2>
+        <div class="form-container">
+          <form id="insuranceForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Jméno</label>
+                <input type="text" id="firstName" placeholder="Jan" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Příjmení</label>
+                <input type="text" id="lastName" placeholder="Novák" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="birthDate">Datum narození</label>
+                <input type="date" id="birthDate" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="+420731584972"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" id="saveButton">Uložit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="insured.js"></script>
+    <script src="insuranceApp.js"></script>
+    <script src="eventHandler.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

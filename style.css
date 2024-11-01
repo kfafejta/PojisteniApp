@@ -1,0 +1,321 @@
+/* CSS Variables */
+:root {
+  --body-color: #333;
+  --header-color: #333;
+  --nav-text-color: white;
+  --table-border-color: black;
+  --table-th-color: #bebebe;
+  --table-inside-color: #eeeeee;
+  --del-butt-color: #e74c3c;
+  --del-butt-text-color: #fff;
+  --del-butt-hov-color: #c0392b;
+  --del-butt-act-color: #a93226;
+  --edit-butt-color: #f39c12;
+  --edit-butt-text-color: #fff;
+  --edit-butt-hov-color: #e67e22;
+  --edit-butt-act-color: #d35400;
+  --input-color: #ccc;
+  --save-butt-color: #007bff;
+  --save-butt-text-color: #fff;
+  --save-butt-hov-color: #0056b3;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 20px;
+  color: var(--body-color);
+}
+
+header {
+  background-color: var(--header-color);
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: var(--nav-text-color);
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  color: var(--nav-text-color);
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.insured-section {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--table-border-color);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-th-color);
+}
+
+.new-row {
+  background-color: var(--table-inside-color);
+}
+
+.delete-button {
+  background-color: var(--del-butt-color);
+  color: var(--del-butt-text-color);
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+  width: 7em;
+}
+
+.delete-button:hover {
+  background-color: var(--del-butt-hov-color);
+}
+
+.delete-button:active {
+  background-color: var(--del-butt-act-color);
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+.edit-button {
+  background-color: var(--edit-butt-color);
+  color: var(--edit-butt-text-color);
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+  width: 7em;
+}
+
+.edit-button:hover {
+  background-color: var(--edit-butt-hov-color);
+}
+
+.edit-button:active {
+  background-color: var(--edit-butt-act-color);
+}
+
+.edit-button:focus {
+  outline: none;
+}
+
+.new-insured-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--input-color);
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--save-butt-color);
+  color: var(--save-butt-text-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--save-butt-hov-color);
+}
+
+/* Responsive Design */
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  th,
+  td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* Tablets (min-width: 481px and max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  th,
+  td {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+
+  .edit-button {
+    margin-bottom: 5px;
+  }
+}
+
+/* Medium devices (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .form-container {
+    gap: 15px;
+  }
+
+  .form-row {
+    gap: 5px;
+  }
+
+  th,
+  td {
+    font-size: 1em;
+  }
+}
+
+/* Large screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .form-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  th,
+  td {
+    font-size: 1em;
+  }
+}
